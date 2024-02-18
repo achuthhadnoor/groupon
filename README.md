@@ -2,6 +2,8 @@
     <h1 align="center">Wikipedia search and analysis tool</h1>
 </div>
 
+![App UI](app-ui.png)
+
 ### services
 
 To install the dependencies please follow the below steps
@@ -45,7 +47,7 @@ We use `@apollo/server` and `@apollo/client` in `Nextjs` with `app-rounter` beca
 
 ### Providers
 
-1) `ApolloProvider`: For creating an `@apollo/client` and then a context 
+1) `ApolloProvider`: For creating an `@apollo/client` and then a context to use `useQuery` hook to fetch data
 
 2) `HistoryProvider`: used to save the search history of the user.
 
@@ -68,3 +70,23 @@ We use `@apollo/server` and `@apollo/client` in `Nextjs` with `app-rounter` beca
 5) The search history is logged and shown as pills below the search input.
 
 6) Pagination support in the api to help improve the performance of the app.
+
+### To run server and client locally
+
+```sh-session
+npm run dev
+```
+
+You will be able to access the app at `http://localhost:3000` and graphql at `http://loaclhost:3000/api/graphql`
+
+### Build
+
+```sh-session
+npm run build
+```
+
+### Testing
+
+```sh-session
+npm run test
+```
