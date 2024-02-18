@@ -14,6 +14,5 @@ export const calculateRelevanceScore = (
     result.snippet.match(new RegExp(query, "gi")) || []
   ).length;
   const relevanceScore = titleOccurrences * 0.7 + snippetOccurrences * 0.3;
-
   return relevanceScore;
 };

@@ -25,7 +25,7 @@ export default function SearchInput({ search, setSearch }: ISearchInputProps) {
     }, [])
     return (
         <>
-            <div className="flex p-2 bg-neutral-50 rounded items-center shadow-sm ">
+            <div className="flex p-2 bg-neutral-50 dark:bg-neutral-800 dark:text-neutral-100 rounded items-center shadow-sm ">
                 <label htmlFor="wiki-search" className="">
                 </label>
                 <input
@@ -37,12 +37,12 @@ export default function SearchInput({ search, setSearch }: ISearchInputProps) {
                     onChange={onInputChange}
                     value={search}
                 />
-                <kbd
-                    className="px-3 py-2  rounded text-neutral-400 cursor-pointer hover:bg-neutral-100"
+                {/* <kbd
+                    className="px-3 py-2  rounded text-neutral-400 cursor-pointer hover:bg-neutral-100 dark:hover:bg-neutral-700"
                     title="history"
                     onClick={() => {
                         setToggleHistory(prv => !prv)
-                    }}>↻</kbd>
+                    }}>↻</kbd> */}
             </div>
             {toggleHistory &&
                 <SearchHistory setSearch={setSearch} />}

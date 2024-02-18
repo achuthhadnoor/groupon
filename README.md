@@ -30,21 +30,20 @@ To install the dependencies please follow the below steps
 
 ### Why this stack?
 
-I have chose to use `@apollo/server` and `@apollo/client` in `Nextjs` with `app-rounter` because `Nextjs` is a
-powerful combination for building modern web applications with efficient development workflows and high-performance user interface.
+We use `@apollo/server` and `@apollo/client` in `Nextjs` with `app-rounter` because 
 
-It comes with support like built in Built-in Optimizations
+`apollo graphql` helps us use the graphql both on server and client effectively.
 
-1) Automatic Image,
-2) Font, and Script Optimizations for improved UX and Core Web Vitals. <br/>
-3) Data Fetching <br/>
-4) Server Actions <br/>
-5) Advanced Routing & Nested Layouts, <br/>
-6) Client and Server Rendering etc.
+`Nextjs` comes with support like :
+1) Built in Built-in Optimizations
+2) Automatic Image,
+3) Font, and Script Optimizations for improved UX and Core Web Vitals. <br/>
+4) Data Fetching <br/>
+5) Server Actions <br/>
+6) Advanced Routing & Nested Layouts, <br/>
+7) Client and Server Rendering etc.
 
 ### Providers
-
-Providers are part of state management solution by react where you pass a context and then modify the data across the components
 
 1) `ApolloProvider`: For creating an `@apollo/client` and then a context 
 
@@ -62,10 +61,10 @@ Providers are part of state management solution by react where you pass a contex
 
 2) user will enter the search query
 
-3) The results are fetched from @apollo/server in relevance-based sorting
+3) The results are fetched from `@apollo/server` using `relevance-based sorting`
 
-4) A loader is shown as user can understand that data is being fetched.
+4) A loader is shown as user can understand that data is being fetched as visual feedback.
 
-5) The search history is logged.
+5) The search history is logged and shown as pills below the search input.
 
 6) Pagination support in the api to help improve the performance of the app.

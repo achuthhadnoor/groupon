@@ -19,7 +19,7 @@ const useWikiSearch = (searchTerm: string, limit: number) => {
     const nextPage = () => {
         fetchMore({
             variables: {
-                offset: data.search.pageInfo.endCursor,
+                offset: Number(data.search.pageInfo.endCursor),
             },
             updateQuery: (prev, { fetchMoreResult }) => {
                 if (!fetchMoreResult) return prev;
