@@ -26,8 +26,7 @@ const useWikiSearch = (searchTerm: string, limit: number) => {
                 return {
                     search: {
                         ...fetchMoreResult.search,
-                        edges: fetchMoreResult.search.edges,
-                        // edges: [...prev.search.edges, ...fetchMoreResult.search.edges],
+                        results: fetchMoreResult.search.results,
                     },
                 };
             },

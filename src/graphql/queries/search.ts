@@ -4,9 +4,9 @@ export const SEARCH_QUERY = gql`
   query Search($query: String!, $limit: Int!, $offset: Int) {
     search(query: $query, limit: $limit, offset: $offset) {
       totalCount
-      edges {
+      results {
         cursor
-        node {
+        result {
           title
           snippet
           url

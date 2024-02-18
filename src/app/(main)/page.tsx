@@ -11,7 +11,6 @@ export default function Home() {
     <main className="flex flex-col items-center justify-between p-2 md:p-24  bg-neutral-100 dark:bg-neutral-900 w-full h-screen  overflow-auto">
       <div className="relative rounded w-full lg:w-1/2 text-center gap-5 flex-col flex ">
         <SearchInput setSearch={setSearch} search={search} />
-        {/* <hr className="dark:bg-neutral-800" /> */}
         {searchValue.trim() !== '' ? <>
           <span className='text-xs font-semibold text-left dark:text-neutral-100'>Search Results</span> <SearchResults searchTerm={searchValue} />
         </>

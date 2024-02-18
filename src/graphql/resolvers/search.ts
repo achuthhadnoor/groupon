@@ -32,19 +32,19 @@ const resolvers = {
         const totalCount = response.data.query.searchinfo.totalhits;
         const hasNextPage = offset + limit < totalCount;
         const endCursor = hasNextPage ? offset + limit : null;
-        const edges = sortedResults.map(
+        const results = sortedResults.map(
           (result: {
             pageid: any;
             relevanceScore: any;
             title: string | number | boolean;
             snippet: any;
           }) => ({
-            cursor: result.pageid, // Using pageid as cursor, you can choose a different unique identifier
+            cursor: result.pageid,
             relevanceScore: result.relevanceScore,
-            node: {
+            result: {
               title: result.title,
               snippet: result.snippet,
-              url: `https://en.wikipedia.org/wiki/${encodeURIComponent(
+              url: `${process.env.TITLE_URL}${encodeURIComponent(
                 result.title
               )}`,
             },
@@ -52,7 +52,7 @@ const resolvers = {
         );
         return {
           totalCount,
-          edges,
+          results,
           pageInfo: {
             hasNextPage,
             endCursor,

@@ -21,12 +21,12 @@ export default function SearchResults({ searchTerm }: { searchTerm: string }) {
     return (
         <div className="flex p-2 bg-neutral-50 dark:bg-neutral-800 rounded items-center shadow-sm dark:text-neutral-100">
             <div className='relative text-left overflow-auto gap-2 flex flex-col'>
-                {data.search.edges.map(({ node }: any) => (
-                    <Link key={node.url} href={node.url} target='_blank' rel='noopener noreferrer'>
+                {data.search.results.map(({ result }: any) => (
+                    <Link key={result.url} href={result.url} target='_blank' rel='noopener noreferrer'>
                         <div className='hover:bg-neutral-200/30 hover:dark:bg-neutral-700/60 rounded border-b-[1px] border-b-neutral-200 dark:border-b-neutral-700'>
                             <div className='p-2 gap-2 flex flex-col'>
-                                <h2 className='text-lg font-semibold'>{node.title}</h2>
-                                <p dangerouslySetInnerHTML={{ __html: node.snippet }} className='text-sm'></p>
+                                <h2 className='text-lg font-semibold'>{result.title}</h2>
+                                <p dangerouslySetInnerHTML={{ __html: result.snippet }} className='text-xs'></p>
                             </div>
                         </div>
                     </Link>

@@ -31,6 +31,4 @@ export const SearchHistoryProvider = ({ children }: { children: React.ReactNode 
         </SearchHistoryContext.Provider>
     );
 };
-
-// Custom hook to consume the search history context
 export const useSearchHistory = () => useContext(SearchHistoryContext);

@@ -4,13 +4,13 @@ const typeDefs = `
   }
   type SearchResultConnection {
     totalCount: Int
-    edges: [SearchResultEdge]
+    results: [SearchResultEdge]
     pageInfo: PageInfo
   }
 
   type SearchResultEdge {
     cursor: String!
-    node: SearchResult
+    result: SearchResult
   }
   type SearchResult {
     title: String
