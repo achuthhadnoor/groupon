@@ -10,7 +10,7 @@ interface IProviderProps {
 export default function Providers({ children }: IProviderProps) {
 
     const client = new ApolloClient({
-        uri: `${location.origin}/api/graphql`,
+        uri: `/api/graphql`,
         cache: new InMemoryCache()
     })
     return (
